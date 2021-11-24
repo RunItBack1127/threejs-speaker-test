@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THREEJS SPEAKER TEST</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        canvas {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        #color-container {
+            width: 100%;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            bottom: 30px;
+        }
+
+        #slider-container {
+            position: absolute;
+            bottom: 30px;
+            width: 100%;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            justify-content: space-between;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .color-range-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 40%;
+        }
+
+        .color-range-container .color-name {
+            color: #fff;
+            font-family: sans-serif;
+            font-size: 20px;
+            width: 5%;
+        }
+
+        .color-range-container input {
+            width: 80%;
+            appearance: none;
+            outline: none;
+            border-radius: 50px;
+            height: 10px;
+        }
+
+        .color-range-container input::-moz-range-thumb {
+            width: 15px;
+            height: 15px;
+            border-radius: 50px;
+            /* border: 1px solid #000; */
+        }
+
+        .color-range-container input#redSlider {
+            background: #f00;
+        }
+
+        .color-range-container input#greenSlider {
+            background: #0f0;
+        }
+
+        .color-range-container input#blueSlider {
+            background: #00f;
+        }
+
+        #material-container {
+            position: absolute;
+            left: 20px;
+            top: 50px;
+            display: flex;
+            flex-direction: column;
+            height: 250px;
+            width: 300px;
+            justify-content: space-between;
+        }
+
+        #material-container button {
+            width: 100%;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+            padding: 10px 0;
+            background-color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        #material-container button:not(.selected-btn) {
+            background-color: rgba(255, 255, 255, 0.75);
+        }
+
+        #reset {
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+            background: rgba(0, 0, 255, 0.25);
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+            width: 150px;
+            padding: 10px 0;
+            border: none;
+            cursor: pointer;
+        }
+
+        #reset:hover {
+            background: #00f;
+        }
+
+        #coord-container {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #coords {
+            font-family: sans-serif;
+            font-size: 1rem;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div id="slider-container">
+        <div class="color-range-container">
+            <div class="color-name">R</div>
+            <input id="redSlider" type="range" min="0" max="255" value="0">
+        </div>
+        <div class="color-range-container">
+            <div class="color-name">G</div>
+            <input id="greenSlider" type="range" min="0" max="255" value="0">
+        </div>
+        <div class="color-range-container">
+            <div class="color-name">B</div>
+            <input id="blueSlider" type="range" min="0" max="255" value="0">
+        </div>
+    </div>
+
+    <div id="coord-container">
+        <p id="coords"></p>
+    </div>
+
+    <div id="material-container">
+        <button class="selected-btn" id="region1Btn">Region 1</button>
+        <button id="region2Btn">Region 2</button>
+        <button id="region3Btn">Region 3</button>
+        <button id="region4Btn">Region 4</button>
+        <button id="region5Btn">Region 5</button>
+    </div>
+
+    <button id="reset">Reset</button>
+    <script type="module" src="src/speaker.js"></script>
+</body>
+</html>

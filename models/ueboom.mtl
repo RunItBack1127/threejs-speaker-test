@@ -1,0 +1,68 @@
+#
+# Bunkspeed OBJ Material File
+# http://www.bunkspeed.com
+#
+
+newmtl carbon_fiber_dyneema_plain_2d
+Kd 0.000000 0.000000 0.000000
+# Kd 0.000000 0.000000 0.000000
+# Kd 0 0.454902 0.3921569
+# map_Kd C:\Users\wpgreene\Downloads\carbon fiber dyneema plain.jpg
+Ks 0.5 0.5 0.5
+# map_bump -bm 2 C:\Users\wpgreene\Downloads\cf_dyneema_plain.jpg
+# bump C:\Users\wpgreene\Downloads\cf_dyneema_plain.jpg
+illum 2
+Ns 99.90109
+
+newmtl burnished_titanium
+Kd 1 0.9607843 0.9294118
+Ks 1 0.9607843 0.9294118
+map_Ks C:\Users\wpgreene\Downloads\diffuse_burnished.dds
+map_bump -bm 0.5 C:\Users\wpgreene\Downloads\swburnished_bump.jpg
+bump C:\Users\wpgreene\Downloads\swburnished_bump.jpg
+illum 2
+Ns 6.954887
+
+newmtl white_low_gloss_plastic
+Kd 1 1 1
+Ks 0.5 0.5 0.5
+illum 2
+Ns 1.801619
+
+newmtl burnished_brass
+Kd 1 0.8705882 0.5294118
+Ks 1 0.8705882 0.5294118
+map_Ks C:\Users\wpgreene\Downloads\diffuse_burnished.dds
+map_bump -bm 0.5 C:\Users\wpgreene\Downloads\swburnished_bump.jpg
+bump C:\Users\wpgreene\Downloads\swburnished_bump.jpg
+illum 2
+Ns 6.954887
+
+newmtl yellow_low_gloss_plastic
+Kd 1.000000 0.000000 0.000000
+# Kd 0.02352941 0.4980392 0.427451
+Ks 0.5 0.5 0.5
+illum 2
+Ns 1.614907
+
+newmtl polypropylene
+Kd 1 1 1
+Ks 0.5 0.5 0.5
+illum 2
+
+newmtl white_medium_gloss_plastic
+Kd 1 1 1
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109
+
+newmtl black_low_gloss_plastic
+Kd 0.1019608 0.1019608 0.1019608
+Ks 0.5 0.5 0.5
+illum 2
+Ns 1.801619
+
+newmtl black_spray_paint
+Kd 0.05882353 0.05882353 0.05882353
+Ks 0.5 0.5 0.5
+illum 2
