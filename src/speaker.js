@@ -288,7 +288,7 @@ document.getElementById("reset").addEventListener("click", () => {
 
     scene.remove(speakerModel);
 
-    gltfLoader.load("../models/ueboom.glb", (speaker) => {
+    gltfLoader.load("models/ueboom.glb", (speaker) => {
         speakerModel = speaker.scene;
         speakerModel.scale.set(2, 2, 2);
         scene.add(speakerModel);
