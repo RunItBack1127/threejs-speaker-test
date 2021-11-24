@@ -37,7 +37,7 @@ coords.textContent = `x: ${camera.position.x},
 const gltfLoader = new GLTFLoader();
 let speakerModel;
 
-gltfLoader.load("../models/ueboom.glb", (speaker) => {
+gltfLoader.load("models/ueboom.glb", (speaker) => {
     speakerModel = speaker.scene;
     speakerModel.scale.set(2, 2, 2);
     scene.add(speakerModel);
