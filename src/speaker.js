@@ -14,7 +14,6 @@ scene.add(light);
 // Change position to wherever Solidworks places
 // the light for the speaker model
 
-const width = window.innerWidth / window.innerHeight;
 const camera = new THREE.PerspectiveCamera(45, 2, 0.1, 100);
 // camera.position.set(1, 1, 1);
 
@@ -44,9 +43,9 @@ gltfLoader.load("models/ueboom.glb", (speaker) => {
 });
 
 window.addEventListener("resize", () => {
-    camera.aspect = width;
+    camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
-    renderer.setSize(width);
+    renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.render(scene, camera);
 });
 
